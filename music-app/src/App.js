@@ -4,8 +4,8 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import React from 'react';
 import './index.css';
-
 function Player(props) {
+
   return (
     <AudioPlayer
       autoPlay
@@ -17,7 +17,15 @@ function Player(props) {
 }
 
 
+
 class App extends React.Component{
+   constructor(props) {
+    super(props);
+    this.state = {
+      music_path: true,
+    };
+   }
+  
   render() {
     return (
       <div className="App">
@@ -38,7 +46,7 @@ class App extends React.Component{
         </header>
         <footer>
           <Player
-            value={"path"}
+            value={music}
           />
         </footer>
       </div>
