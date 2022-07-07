@@ -11,6 +11,23 @@
            v-bind 属性はディレクティブと呼ばれており、この要素の title 属性を Vue インスタンスの message プロパティによって更新して保存する
             </span>
         </div>
+        <div id = "app-3">
+            <span v-if ="seen"> TRUE</span>
+
+        </div>
+        <div id = "app-4">
+            <ol>
+                <li v-for="todo in todos">
+                    {{todo.text}}
+                </li>
+            </ol>
+        </div>
+        <div id = "app-5">
+            <p>{{message}}</p>
+            <button v-on:click="reverseMessage"> Reverse Message</button>
+
+        </div>
+
         <script src = 'index.js'></script>
     </body>
 </html>
